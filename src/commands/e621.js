@@ -12,7 +12,7 @@ exports.run = function (bot, msg, args) {
             url: 'https://e621.net/post/index.json?tags= ' + args.join(' ') + ' order:random',
             json: true,
             headers: {
-                'User-Agent': 'richardz @ E621'
+                'User-Agent': 'add your e621 username here @ E621'
             },
             qs: {
                 limit: 3
