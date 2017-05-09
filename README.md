@@ -17,4 +17,6 @@ then to view the console simply run `pm2 m`or `pm2 m 0` (as 0 is the default id 
 
 ## Credits
 the original base for the selfbot came from [here](https://github.com/eslachance/djs-selfbot-v9). The `prune` and `purge` commands are basically the only remaining parts of the original code, and even **they** have been modified to some degree or another. 
+*
 The rest is all either my code, or snippets I have found online (but mostly just my code).
+*
