@@ -6,7 +6,7 @@ Make sure that the git command-line tools are installed on your computer, and ha
 - `git clone https://github.com/JessetheTiger/sharpbot-V2.git`
 - `cd sharpbot-V2`
 - `unzip node_modules.zip`
-- `i recommend installing pm2 from [here]:https://github.com/Unitech/pm2`
+- `i recommend installing pm2 from` [here]:(https://github.com/Unitech/pm2)
 - `edit config.json by adding your user-token`
 
 # running
