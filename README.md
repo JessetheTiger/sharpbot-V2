@@ -1,5 +1,5 @@
 # SharpBot-V2
-SharpBot-V2 is an ever-expanding selfbot for Discord.js v11 with mostly utilitarion commands, but also a few fun commands.
+SharpBot-V2 is an ever-expanding selfbot for Discord.js v11.1 with mostly utilitarion commands, but also a few fun commands.
 
 # Download and install
 Make sure that the git command-line tools are installed on your computer, and have NPM isntalled as well
