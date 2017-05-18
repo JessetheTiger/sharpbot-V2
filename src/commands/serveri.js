@@ -1,7 +1,7 @@
 exports.run = function(bot, msg, args) {
   var tag = msg.guild.owner.user;
   msg.delete();
-  msg.channel.sendMessage(`\`\`\`js
+  msg.channel.send(`\`\`\`js
         serverinfo of ${msg.guild.name}
 Guild{
  serverName: '${msg.guild.name}',
@@ -15,7 +15,7 @@ Guild{
     };
 
 exports.info = {
-    name: 'server',
+    name: 'serveri',
     usage: 'server',
     description: 'shows the serverinfo in text'
 };

@@ -9,7 +9,7 @@ exports.run = function (bot, msg, args) {
                 .forEach(m => { m.delete().catch(console.error); deletedMessages++; });
         }).then(() => {
             if (deletedMessages === -1) deletedMessages = 0;
-            msg.channel.sendMessage(`\`\`LOG>\`\`Pruned \`${deletedMessages}\` messages.`)
+            msg.channel.send(`\`\`LOG>\`\`Pruned \`${deletedMessages}\` messages.`)
                 .then(m => m.delete(5000));
         }).catch(console.error);
 

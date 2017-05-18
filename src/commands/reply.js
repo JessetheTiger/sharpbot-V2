@@ -3,7 +3,7 @@ exports.run = function(bot, msg, args) {
   msg.channel.fetchMessages({limit: 1, around: replyTo})
   .then(messages=> {
     const replyToMsg = messages.first();
-    msg.channel.sendMessage(replyText.join(" "), {embed: {
+    msg.channel.send(replyText.join(" "), {embed: {
       color: 3447003,
       author: {
         name: `${replyToMsg.author.username} (${replyToMsg.author.id})`,

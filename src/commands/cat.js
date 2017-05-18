@@ -6,7 +6,7 @@ exports.getCat = function (callback) {
 
 exports.run = function (bot, msg) {
     msg.delete();
-    this.getCat((url) => msg.channel.sendMessage(url));
+    this.getCat((url) => msg.channel.send(url));
 };
 
 exports.info = {

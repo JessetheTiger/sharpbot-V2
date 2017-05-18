@@ -12,7 +12,7 @@ const utils = require('../utils');
         };
 exports.run = function (bot, msg) {
   msg.delete();
-  msg.channel.sendMessage('', {
+  msg.channel.send('', {
         embed: utils.embed('SharpBot V2 Stats', '***This message will self-destruct in 15 seconds.***',
            [{ name: 'Creator:',
            value: `Jesse#8621`,

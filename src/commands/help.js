@@ -16,7 +16,7 @@ exports.run = function (bot, msg, args) {
         }
 
         msg.delete();
-        msg.channel.sendMessage('', {
+        msg.channel.send('', {
             embed: utils.embed('Commands', 'This message will self-destruct in 20 seconds.', fields, { inline: true })
         }).then(m => m.delete(20000));
 
@@ -26,10 +26,10 @@ exports.run = function (bot, msg, args) {
     let command = bot.commands[args[0]];
     if (!command) {
           msg.delete();
-  msg.channel.sendMessage(`:no_entry_sign: The command '${args[0]}' does not exist!`).then(m => m.delete(2000));
+  msg.channel.send(`:no_entry_sign: The command '${args[0]}' does not exist!`).then(m => m.delete(2000));
     } else {
           msg.delete();
-  msg.channel.sendMessage('', {
+  msg.channel.send('', {
             embed: utils.embed('', 'This message will self-destruct in 20 seconds.', [getHelp(bot, command)])
         }).then(m => m.delete(20000));
     }

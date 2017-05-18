@@ -6,8 +6,8 @@ exports.getDog = function (callback) {
 
 exports.run = function (bot, msg) {
     msg.delete();
-    msg.channel.sendMessage(':dog: Have some dog pix:');
-    this.getDog((url) => msg.channel.sendMessage(url));
+    msg.channel.send(':dog: Have some dog pix:');
+    this.getDog((url) => msg.channel.send(url));
 };
 
 exports.info = {

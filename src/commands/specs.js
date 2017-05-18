@@ -3,8 +3,8 @@ const utils = require('../utils');
 
 exports.run = function (bot, msg) {
   msg.delete();
-  msg.channel.sendMessage('', {
-        embed: utils.embed('SharpBot Stats', '***This message will self-destruct in 20 seconds.***', 
+  msg.channel.send('', {
+        embed: utils.embed('SharpBot Stats', '***This message will self-destruct in 20 seconds.***',
            [{ name: 'Free Memory:',
            value: `${((require('util').inspect(require('os').freemem())) / 1024 / 1024 / 1024).toLocaleString()}GB`,
            inline: true },

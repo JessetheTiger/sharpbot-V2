@@ -15,8 +15,7 @@ exports.run = (bot, msg, args) => {
     }
 
     msg.delete();
-
-    msg.channel.sendMessage(':arrows_counterclockwise: Searching...').then(m => {
+    msg.channel.send(':arrows_counterclockwise: Searching...').then(m => {
         request.get('http://google.com/search?client=chrome&rls=en&ie=UTF-8&oe=UTF-8&q=' + args.join('+'), (err, res, body) => {
             if (!err && res.statusCode === 200) {
                 let $ = cheerio.load(body);
@@ -33,7 +32,7 @@ exports.run = (bot, msg, args) => {
                 });
 
                 results = results.filter(r => r.link && r.description);
-                results = results.splice(0, 3);
+                results = results.splice(1, 2);
 
                 m.edit('', {
                     embed: utils.embed(`Search results for \`${args.join(' ')}\``, results.map(r => r.link + '\n\t' + r.description + '\n').join('\n')) });

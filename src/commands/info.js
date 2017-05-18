@@ -2,13 +2,13 @@ exports.run = function (bot, msg, args) {
 
   msg.delete();
   if(msg.mentions.users.size === 0) {
-      return msg.channel.sendMessage('`Mention a user!`');
+      return msg.channel.send('`Mention a user!`');
     }
     let info = msg.mentions.users.first();
     if(!info) {
-      return msg.channel.sendMessage('`Invalid user!`');
+      return msg.channel.send('`Invalid user!`');
     }
-    msg.channel.sendMessage(`**\`\`\`js
+    msg.channel.send(`**\`\`\`js
 userInfo of: ${info.username}#${info.discriminator}
 ${require("util").inspect(info, { depth: 1 })}\`\`\`**`);
 };

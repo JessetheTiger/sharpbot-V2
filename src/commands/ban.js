@@ -3,17 +3,17 @@ exports.run = function(bot, msg, args) {
   let ban_id = args[0];
   let days = args[1];
 if(msg.mentions.users.size === 0) {
-      return msg.channel.sendMessage('`Mention a user!`');
+      return msg.channel.send('`Mention a user!`');
     }
     let banMember = msg.guild.member(msg.mentions.users.first());
     if(!banMember) {
-      return msg.channel.sendMessage('`Invalid user!`');
+      return msg.channel.send('`Invalid user!`');
     }
 
-if (!msg.guild.member(banMember).kickable) return msg.channel.sendMessage(`\`\`LOG>\`\`missing **banMember** permissions`);
+if (!msg.guild.member(banMember).kickable) return msg.channel.send(`\`\`LOG>\`\`missing **banMember** permissions`);
 
 if(banMember.ban()) {
-return msg.channel.sendMessage(`\`\`LOG>\`\`the user ${args.join(' ')} has been banned`);
+return msg.channel.send(`\`\`LOG>\`\`the user ${args.join(' ')} has been banned`);
 }
 };
 
