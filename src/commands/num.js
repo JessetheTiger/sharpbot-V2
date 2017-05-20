@@ -5,6 +5,9 @@ msg.delete()
       var evaled = eval(code);
       if (typeof evaled !== 'string')
           evaled = require('util').inspect(evaled);
+
+          evaled = evaled.replace(bot.token, "[TOKEN]");
+          
       msg.channel.send('input :inbox_tray:```JS\n' + clean(code) + '\n``` output :outbox_tray:```JS\n' + clean(evaled) + '\n```');
   }
   catch (err) {

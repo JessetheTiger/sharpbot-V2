@@ -5,6 +5,9 @@ exports.run = function(bot, msg, args) {
         var evaled = eval(code);
         if (typeof evaled !== 'string')
             evaled = require('util').inspect(evaled);
+
+            evaled = evaled.replace(bot.token, "[TOKEN]");
+
         msg.channel.send('```xl\n' + clean(evaled) + '\n```');
     }
     catch (err) {
@@ -21,6 +24,7 @@ exports.info = {
 function clean(text) {
     if (typeof (text) === 'string') {
         return text.replace(/`/g, '`' + String.fromCharCode(8203)).replace(/@/g, '@' + String.fromCharCode(8203));
+
     }
     else {
         return text;

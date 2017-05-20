@@ -4,9 +4,9 @@ exports.run = function(bot, msg, args) {
   .then(messages=> {
     const replyToMsg = messages.first();
     msg.channel.send(replyText.join(" "), {embed: {
-      color: 3447003,
+      color: 16711680,
       author: {
-        name: `${replyToMsg.author.username} (${replyToMsg.author.id})`,
+        name: `${replyToMsg.author.username}#${replyToMsg.author.discriminator} ${replyToMsg.author.toString()}`,
         icon_url: replyToMsg.author.avatarURL
       },
       description: replyToMsg.content
